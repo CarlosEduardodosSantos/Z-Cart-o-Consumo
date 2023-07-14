@@ -664,7 +664,8 @@
         </button>
         <button
           type="button"
-          (click)="getTxtInfoMov(saldo2.value, tipo2.value, metodo2.value)"
+          [disabled]="clicked"
+          (click)="getTxtInfoMov(saldo2.value, tipo2.value, metodo2.value);"
           class="btn btn-primary"
         >
           Salvar
@@ -734,6 +735,7 @@
         </button>
         <button
           type="button"
+          [disabled]="clicked"
           (click)="getTxtInfoMov(saldo3.value, tipo3.value, metodo3.value)"
           class="btn btn-primary"
         >

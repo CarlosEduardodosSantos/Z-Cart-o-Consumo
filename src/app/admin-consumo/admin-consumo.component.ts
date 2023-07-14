@@ -362,7 +362,6 @@ export class AdminConsumoComponent implements OnInit {
     else
     {
       
-    
     await this.CartaoConsumoService.obterConsuById(this.Id).then((consum) => {
       this.consumoAtual = consum;
     });
@@ -376,6 +375,7 @@ export class AdminConsumoComponent implements OnInit {
       metodo: _metodo,
     };
     if (this.mov.valor !== '' && this.mov.tipoMov !== '') {
+      this.clicked= true;
       this.dataMovAtual = new Date();
       this.valorMovAtual = this.mov.valor;
       console.log(this.valorMovAtual);
@@ -389,7 +389,7 @@ export class AdminConsumoComponent implements OnInit {
       this.reloading();
     }
   }
-   this.clicked= true;
+
   }
 
   async getTxtInfoMovWithNro(_saldo: any, _tipoMov: any, _metodo: any) {
@@ -411,6 +411,7 @@ export class AdminConsumoComponent implements OnInit {
       _saldo !== '' &&
       _saldo !== null
     ) {
+      this.clicked= true;
       this.index = 0;
       this.mov = {
         numeroCartao: this.consumoAtual.numero,

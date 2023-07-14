@@ -31,6 +31,7 @@ export class UserMovComponent implements OnInit {
   grupos: any;
   frete: any;
   dataagora = new Date().toISOString().substring(0, 10);
+  clicked = false;
 
   constructor(
     private CartaoConsumoService: CartaoConsumoService,
@@ -182,6 +183,7 @@ export class UserMovComponent implements OnInit {
   }
 
   getTxtInfoMov(_saldo: any, _tipoMov: any, _metodo: any) {
+    this.clicked = true;
     var metodo: any = _metodo;
     if(_saldo.includes('-'))
     {

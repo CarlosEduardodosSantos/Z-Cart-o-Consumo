@@ -1,7 +1,7 @@
 export var environment = {
   production: false,
-  apiurl: 'http://api.zclub.com.br/',
-  //apiurl: 'http://localhost:56435/',
+  //apiurl: 'http://api.zclub.com.br/',
+  apiurl: 'http://localhost:56435/',
   resId: 66,
 };
 
